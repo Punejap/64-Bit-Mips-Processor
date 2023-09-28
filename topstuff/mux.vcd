@@ -1,0 +1,67 @@
+$date
+	Thu Dec 08 20:27:40 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mux_tb $end
+$var wire 64 ! data_out [63:0] $end
+$var reg 1 " en $end
+$var reg 64 # in_0 [63:0] $end
+$var reg 64 $ in_1 [63:0] $end
+$scope module m1 $end
+$var wire 1 " en $end
+$var wire 64 % in_0 [63:0] $end
+$var wire 64 & in_1 [63:0] $end
+$var wire 64 ' data_out [63:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0xx0x0x1xx0xxxx10x '
+b10000111100101100 &
+b1010010001010101 %
+b10000111100101100 $
+b1010010001010101 #
+x"
+b0xx0x0x1xx0xxxx10x !
+$end
+#69
+b10000111100101100 !
+b10000111100101100 '
+1"
+#138
+b1010010001010101 !
+b1010010001010101 '
+0"
+#207
+b10000111100101100 !
+b10000111100101100 '
+1"
+#276
+b1010010001010101 !
+b1010010001010101 '
+0"
+#345
+b10000111100101100 !
+b10000111100101100 '
+1"
+#414
+b1010010001010101 !
+b1010010001010101 '
+0"
+#483
+b10000111100101100 !
+b10000111100101100 '
+1"
+#552
+b1010010001010101 !
+b1010010001010101 '
+0"
