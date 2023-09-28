@@ -1,0 +1,46 @@
+$date
+	Wed Dec 07 05:03:57 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module datamem_tb $end
+$var wire 64 ! read_data [63:0] $end
+$var reg 64 " address [63:0] $end
+$var reg 1 # enable $end
+$var reg 1 $ memRead_en $end
+$var reg 1 % memWrite_en $end
+$var reg 128 & write_data [127:0] $end
+$scope module u_datamem $end
+$var wire 64 ' address [63:0] $end
+$var wire 1 # en $end
+$var wire 1 $ memRead_en $end
+$var wire 1 % memWrite_en $end
+$var wire 128 ( write_data_word [127:0] $end
+$var reg 64 ) read_data [63:0] $end
+$var reg 64 * write_data_1 [63:0] $end
+$var reg 64 + write_data_2 [63:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 +
+b10100011 *
+bx )
+b10100011 (
+b110100 '
+b10100011 &
+1%
+0$
+1#
+b110100 "
+bx !
+$end
+#100000

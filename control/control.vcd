@@ -1,0 +1,95 @@
+$date
+	Thu Dec 08 18:28:59 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module control_tb $end
+$var wire 1 ! regWrite $end
+$var wire 1 " memWrite $end
+$var wire 1 # memToReg $end
+$var wire 1 $ memRead $end
+$var wire 1 % branch $end
+$var wire 1 & ALUsrc $end
+$var wire 2 ' ALUOp [1:0] $end
+$var reg 1 ( clk $end
+$var reg 7 ) instr [6:0] $end
+$scope module UUT $end
+$var wire 1 ( clk $end
+$var wire 7 * instr [6:0] $end
+$var wire 1 ! regWrite $end
+$var wire 1 " memWrite $end
+$var wire 1 # memToReg $end
+$var wire 1 $ memRead $end
+$var wire 1 % branch $end
+$var wire 1 & ALUsrc $end
+$var wire 2 + ALUOp [1:0] $end
+$var reg 8 , decoder [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx ,
+bx +
+b110011 *
+b110011 )
+x(
+bx '
+x&
+x%
+x$
+x#
+x"
+x!
+$end
+#50000
+b10 '
+b10 +
+0%
+0"
+0$
+1!
+0#
+0&
+b100010 ,
+0(
+#100000
+b0 '
+b0 +
+1$
+1#
+1&
+b11110000 ,
+b11 )
+b11 *
+0(
+#150000
+1"
+0$
+0!
+0#
+b10001000 ,
+b1000111 )
+b1000111 *
+0(
+#200000
+0(
+#220000
+b101 )
+b101 *
+#270000
+b1 '
+b1 +
+1%
+0"
+0&
+b101 ,
+0(
+#290000

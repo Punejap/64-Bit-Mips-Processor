@@ -1,0 +1,139 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "D:\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\va_math.vpi";
+S_0000019d22c9e240 .scope module, "control_tb" "control_tb" 2 4;
+ .timescale -9 -12;
+v0000019d22c29380_0 .net "ALUOp", 1 0, L_0000019d22c29c40;  1 drivers
+v0000019d22c29ec0_0 .net "ALUsrc", 0 0, L_0000019d22c29240;  1 drivers
+v0000019d22c299c0_0 .net "branch", 0 0, L_0000019d22c29e20;  1 drivers
+v0000019d22c29ce0_0 .var "clk", 0 0;
+v0000019d22c29a60_0 .var "instr", 6 0;
+v0000019d22c29560_0 .net "memRead", 0 0, L_0000019d22c2a000;  1 drivers
+v0000019d22c29ba0_0 .net "memToReg", 0 0, L_0000019d22c291a0;  1 drivers
+v0000019d22c29b00_0 .net "memWrite", 0 0, L_0000019d22c292e0;  1 drivers
+v0000019d22c29f60_0 .net "regWrite", 0 0, L_0000019d22c29600;  1 drivers
+S_0000019d22c9e3d0 .scope module, "UUT" "control" 2 10, 3 1 0, S_0000019d22c9e240;
+ .timescale -9 -12;
+    .port_info 0 /OUTPUT 2 "ALUOp";
+    .port_info 1 /OUTPUT 1 "branch";
+    .port_info 2 /OUTPUT 1 "memWrite";
+    .port_info 3 /OUTPUT 1 "memRead";
+    .port_info 4 /OUTPUT 1 "regWrite";
+    .port_info 5 /OUTPUT 1 "memToReg";
+    .port_info 6 /OUTPUT 1 "ALUsrc";
+    .port_info 7 /INPUT 7 "instr";
+    .port_info 8 /INPUT 1 "clk";
+v0000019d22c9e560_0 .net "ALUOp", 1 0, L_0000019d22c29c40;  alias, 1 drivers
+v0000019d22c96fd0_0 .net "ALUsrc", 0 0, L_0000019d22c29240;  alias, 1 drivers
+v0000019d22c9e600_0 .net "branch", 0 0, L_0000019d22c29e20;  alias, 1 drivers
+v0000019d22bc61b0_0 .net "clk", 0 0, v0000019d22c29ce0_0;  1 drivers
+v0000019d22bc6250_0 .var "decoder", 7 0;
+v0000019d22c29010_0 .net "instr", 6 0, v0000019d22c29a60_0;  1 drivers
+v0000019d22c29100_0 .net "memRead", 0 0, L_0000019d22c2a000;  alias, 1 drivers
+v0000019d22c294c0_0 .net "memToReg", 0 0, L_0000019d22c291a0;  alias, 1 drivers
+v0000019d22c29740_0 .net "memWrite", 0 0, L_0000019d22c292e0;  alias, 1 drivers
+v0000019d22c29d80_0 .net "regWrite", 0 0, L_0000019d22c29600;  alias, 1 drivers
+E_0000019d22bc6860 .event posedge, v0000019d22bc61b0_0;
+L_0000019d22c29c40 .part v0000019d22bc6250_0, 0, 2;
+L_0000019d22c29e20 .part v0000019d22bc6250_0, 2, 1;
+L_0000019d22c292e0 .part v0000019d22bc6250_0, 3, 1;
+L_0000019d22c2a000 .part v0000019d22bc6250_0, 4, 1;
+L_0000019d22c29600 .part v0000019d22bc6250_0, 5, 1;
+L_0000019d22c291a0 .part v0000019d22bc6250_0, 6, 1;
+L_0000019d22c29240 .part v0000019d22bc6250_0, 7, 1;
+    .scope S_0000019d22c9e3d0;
+T_0 ;
+    %wait E_0000019d22bc6860;
+    %load/vec4 v0000019d22c29010_0;
+    %dup/vec4;
+    %pushi/vec4 51, 0, 7;
+    %cmp/u;
+    %jmp/1 T_0.0, 6;
+    %dup/vec4;
+    %pushi/vec4 3, 0, 7;
+    %cmp/u;
+    %jmp/1 T_0.1, 6;
+    %dup/vec4;
+    %pushi/vec4 71, 0, 7;
+    %cmp/u;
+    %jmp/1 T_0.2, 6;
+    %dup/vec4;
+    %pushi/vec4 5, 0, 7;
+    %cmp/u;
+    %jmp/1 T_0.3, 6;
+    %jmp T_0.4;
+T_0.0 ;
+    %pushi/vec4 34, 0, 8;
+    %assign/vec4 v0000019d22bc6250_0, 0;
+    %jmp T_0.4;
+T_0.1 ;
+    %pushi/vec4 240, 0, 8;
+    %assign/vec4 v0000019d22bc6250_0, 0;
+    %jmp T_0.4;
+T_0.2 ;
+    %pushi/vec4 136, 0, 8;
+    %assign/vec4 v0000019d22bc6250_0, 0;
+    %jmp T_0.4;
+T_0.3 ;
+    %pushi/vec4 5, 0, 8;
+    %assign/vec4 v0000019d22bc6250_0, 0;
+    %jmp T_0.4;
+T_0.4 ;
+    %pop/vec4 1;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0000019d22c9e240;
+T_1 ;
+    %vpi_call 2 14 "$dumpfile", "control.vcd" {0 0 0};
+    %vpi_call 2 15 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000019d22c9e240 {0 0 0};
+    %pushi/vec4 51, 0, 7;
+    %store/vec4 v0000019d22c29a60_0, 0, 7;
+    %delay 50000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019d22c29ce0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019d22c29ce0_0, 0, 1;
+    %pushi/vec4 51, 0, 7;
+    %store/vec4 v0000019d22c29a60_0, 0, 7;
+    %delay 50000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019d22c29ce0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019d22c29ce0_0, 0, 1;
+    %pushi/vec4 3, 0, 7;
+    %store/vec4 v0000019d22c29a60_0, 0, 7;
+    %delay 50000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019d22c29ce0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019d22c29ce0_0, 0, 1;
+    %pushi/vec4 71, 0, 7;
+    %store/vec4 v0000019d22c29a60_0, 0, 7;
+    %delay 50000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019d22c29ce0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019d22c29ce0_0, 0, 1;
+    %delay 20000, 0;
+    %pushi/vec4 5, 0, 7;
+    %store/vec4 v0000019d22c29a60_0, 0, 7;
+    %delay 50000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019d22c29ce0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019d22c29ce0_0, 0, 1;
+    %delay 20000, 0;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "control_tb.v";
+    "./control.v";
